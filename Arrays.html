@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript数组操作</title>
+    <script type="application/javascript" src="lib/jquery.min.js"></script>
+</head>
+<body>
+<h2>javascript操作数组</h2>
+<input type="button" value="js数组" onclick="jsArrays();">
+<br>
+<input type="button" value="json数组1" onclick="jsonArrays();">
+</body>
+<script type="application/javascript">
+    function jsArrays() {
+        var a=new Array();
+        a.push('a');
+        a.push('b');
+        a.push('c');
+        alert(a);
+        alert('a index of a'+a.indexOf('a'));
+        $(a).each(function (index,row) {
+            alert('index is '+index);
+            alert('row is '+row);
+        })
+    }
+    function jsonArrays() {
+        var a=new Array();
+        a.push({a:1});
+        a.push({a:2});
+        a.push({a:3});
+        alert('a is '+a);
+        alert(JSON.stringify(a));
+        alert(a[0].a);
+        for(var key in a[1]){
+            alert('key is '+key);
+            alert('value is '+a[0][key]);
+        }
+        $(a).each(function (index,row) {
+            for(var key in row){
+                alert('each key is '+key);
+                alert('each value is '+row[key]);
+            }
+        })
+    }
+</script>
+</html>
