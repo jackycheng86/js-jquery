@@ -25,18 +25,18 @@
         })
     }
     function jsonArrays() {
-        var a=new Array();
-        a.push({a:1});
-        a.push({a:2});
-        a.push({a:3});
-        alert('a is '+a);
+        var b=new Array();
+        b.push({a:1});
+        b.push({a:2});
+        b.push({a:3});
+        alert('a is '+b);
         alert(JSON.stringify(a));
-        alert(a[0].a);
-        for(var key in a[1]){
+        alert(b[0].a);
+        for(var key in b[1]){
             alert('key is '+key);
-            alert('value is '+a[0][key]);
+            alert('value is '+b[0][key]);
         }
-        $(a).each(function (index,row) {
+        $(b).each(function (index,row) {
             for(var key in row){
                 alert('each key is '+key);
                 alert('each value is '+row[key]);
